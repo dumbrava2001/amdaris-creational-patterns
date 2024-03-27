@@ -19,23 +19,15 @@ public class Coffee
     public override string ToString()
     {
         var stringBuilder = new StringBuilder("\nCoffeeTypes:\n");
-        foreach (var coffeeType in CoffeeTypes)
-        {
-            stringBuilder.AppendJoin(',', coffeeType);
-        }
+        stringBuilder.AppendJoin(',', CoffeeTypes);
 
         stringBuilder.Append("\nMilk List:\n");
-        foreach (var milk in MilkList)
-        {
-            stringBuilder.AppendJoin(',', milk);
-        }
+        stringBuilder.AppendJoin(',', MilkList);
 
         stringBuilder.Append("\nSugar List:\n");
-        foreach (var sugar in SugarList)
-        {
-            stringBuilder.AppendJoin(',', sugar);
-        }
+        stringBuilder.AppendJoin(',', SugarList);
 
+        stringBuilder.AppendLine();
         return stringBuilder.ToString();
     }
 }
